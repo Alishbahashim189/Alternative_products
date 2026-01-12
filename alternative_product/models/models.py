@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-
-# from odoo import models, fields, api
+from odoo import models, fields, api
 
 
 # class alternative_product(models.Model):
@@ -16,4 +15,6 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
-
+class ProductOrder(models.Model):
+   _inherit = 'product.template'
+   alternative_products = fields.Many2many('product.product', 'name' , string='Alternative Products')
