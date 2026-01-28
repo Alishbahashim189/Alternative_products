@@ -15,6 +15,15 @@ from odoo import models, fields, api
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
+
 class ProductOrder(models.Model):
    _inherit = 'product.template'
+   # select alternative products if original products not available
    alternative_products = fields.Many2many('product.product', 'name' , string='Alternative Products')
+
+# if product already selected in someother alternative products
+# then show that product in ths product alternative we don't need to select manually
+# fill field automatically when that product selected somewhere in alternative product
+   def autofill_product(self):
+      print("alishba")
+      return "alishba"

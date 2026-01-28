@@ -4,5 +4,5 @@
        <record model="res.groups" id="alternative_product_group">
            <field name="name">Manage Alternative Product</field>
        </record>
-   </data>git branch
+   </data>
 </odoo>

@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page string="Alternative Product" >
+                <page string="Alternative Product" groups="alternative_product.alternative_product_group">
                     <group>
 
                         <field name="alternative_products" widget="many2many_tags"/>
@@ -20,3 +20,4 @@
 
     </record>
 </odoo>
+
